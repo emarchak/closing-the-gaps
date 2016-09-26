@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Closing the Gaps | Prioritizing Accessibility in Custom Themes with Drupal 8</title>
+
+		<meta name="description" content="Closing the Gaps | Prioritizing Accessibility in Custom Themes with Drupal 8">
+		<meta name="author" content="Erin Marchak">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/myplanet.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+<! Intro -------------------------------------------------------------------------------------->
+
+				<section data-state="title-slide nologo-slide" data-background-video="https://www.myplanet.com/sites/default/files/front/MP%20Banner%20Video%201.2.mp4" data-background-video-loop>
+					<h1>Closing the Gaps</h1>
+					<h2 style="text-align: center">Prioritizing Accessibility in Custom Themes with Drupal 8</h2>
+					<p>
+						<a href="http://twitter.com/emarchak">@emarchak</a>
+					</p>
+				</section>
+				
+				<section data-state="pink-slide">
+          <p>
+            <a href="http://myplanet.com"><img src="img/erin.png" class="nude" alt="Erin Marchak"/></a><br/>
+            <a href="http://twitter.com/emarchak">@emarchak</a>
+          </p>
+				</section>
+		
+        <section data-state="title-slide">
+          <a href="http://myplanet.com"><img src="img/mp_logo_wt.png" class="nude" alt="Myplanet"/></a>
+          <p>We build engaging web and mobile <br/>products for the enterprise</p>
+          <p><a href="http://twitter.com/myplanetHQ">@myplanetHQ</a></p>
+        </section>  
+		
+        <section>
+          <section data-transition="fade">
+            <p><code>accessibility = a11y</code></p>
+          </section>
+          <section>
+            <p><code>a<span class="lite">ccessibilit</span>y = a11y</code></p>
+          </section>
+        </section>
+		
+    		<section>
+          <h2>What am I going to cover?</h2>
+          <ol>
+            <li>Why I'm here</li>
+            <li>A11y & Drupal 8</li>
+            <li>How to identify a11y gaps</li>
+            <li>How to resolve a11y gaps</li>
+            <li>Further resources</li>
+          </ol>
+    		</section>
+    		
+<! AMI -------------------------------------------------------------------------------------------->
+			<section>
+			  <section>
+				 <h2>Why I'm here</h2>  				
+ 				 <h3>A Case Study</h3>  				
+			  </section>
+			  <section data-background-image="img/S-M-A-Show-Main-Option-A.jpg">
+				 <h1 style="background-color:rgba(255, 255, 255, 0.6); padding: .5em 0;">AMI</h1>
+			  </section>
+			  <section>
+          <blockquote>Myplanet had a lot of empathy for what we were trying to do. <br/>They felt and understood the mission we had for the site.</blockquote>
+          <p><small>Virginia Vuleta<br/><em>Director, Digital Strategy, Accessible Media Inc</em></small></p>
+		  	</section>  				 
+        <section data-state="black-slide" data-background-image="img/process.png" data-background-position="left">
+          <div style="background-color:rgba(0, 0, 0, 0.6); padding: .5em 0;"><ul>
+            <li>User Experience Testing</li>
+            <li>Design Audits</li>
+            <li>A11y Audits by <a href="http://www.davidmacd.com/">David MacDonald</a></li>
+            <li>Headless components using React.js</li>
+          </ul></div>
+        </section>				 
+			  <section data-background-image="http://byt.wpengine.netdna-cdn.com/wp-content/uploads/2014/04/rupaul-4.gif"></section>
+		 </section>
+			 
+			 
+<! A11y & D8 -------------------------------------------------------------------------------------->
+			<section data-state="teal-slide">
+			  <section><h2>A11y & D8</span></section>
+			  <section><h2>A11y <span class="lite">& D8</span></h2></section>
+        <section data-state="black-slide">
+          <blockquote>The power of the Web is<br/> in its universality.</blockquote>
+          <p><small><a href="http://www.w3.org/standards/webdesign/accessibility">Tim Berners-Lee</a></small></p>
+        </section>
+        <section>
+          <h3>Types of barriers</h3>
+          <ul>
+            <li class="fragment">Physical, motor or mobile</li>
+            <li class="fragment">Visual</li>
+            <li class="fragment">Auditory</li>
+            <li class="fragment">Learning</li>
+            <li class="fragment">Speech or language</li>
+            <li class="fragment">Mental, intellectual or developmental</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Types of solutions</h3>
+          <ul>
+            <li class="fragment">Keyboard, mouse & touch navigation</li>
+            <li class="fragment">Screen readers compatibility & descriptive video</li>
+            <li class="fragment">Captioning </li>
+            <li class="fragment">Legible design & information architecture</li>
+            <li class="fragment">Translatable content</li>
+            <li class="fragment">Trigger warnings for content</li>
+          </ul>
+        </section>
+        <section data-background-color="#fff">
+          <img src="http://2.bp.blogspot.com/-itkFXKclo9o/UWfGAkP_1mI/AAAAAAAANa4/I7uPlyd1O9Y/s640/6.jpg" alt="overcoming bad design" />
+        </section>
+        <section>
+          <a href="http://www.w3.org/"><img src="img/w3c_logo.png" alt="W3C" class="nude"></a>
+        </section>
+        <section>
+          <iframe src="http://www.w3.org/TR/WCAG20/" height="480" width="840" aria-hidden="true"><a href="http://www.w3.org/TR/WCAG20/">The W3C Web accessibility initiative</a></iframe>
+          <p><a href="http://www.w3.org/TR/WCAG20/">The W3C Web Content Accessibility 2.0 Guidelines</a> (WCAG 2.0)</p>
+        </section>
+        <section>
+          <h3>WCAG 2.0 Levels</h3>
+          <ol>
+            <li class="fragment"><strong>Level A</strong> - Essential</li>
+            <li class="fragment"><strong>Level AA</strong> - Preferred</li>
+            <li class="fragment"><strong>Level AAA</strong> - Optional</li>
+          </ol>
+        </section>
+         <section>
+          <h3>WCAG 2.0 Levels</h3>
+          <ol>
+            <li><strong>Level A</strong> - Essential</li>
+            <li><strong>Level AA</strong> - Preferred</li>
+            <li class="lite"><strong>Level AAA</strong> - Optional</li>
+          </ol>
+        </section>
+
+        <section>
+          <ul>
+          <li><a href="http://www.aoda.ca/">Accessibility for Ontarians with Disabilities Act (AODA)</a> (Canada)</li>
+          <li><a href="https://www.section508.gov/">Government-wide Section 508 Accessibility Program</a> (US)</li>
+          <li><a href="http://www.ssbbartgroup.com/laws-standards/european-union-accessibility-requirements/">European Union Accessibility Requirements</a> (EU)</li>
+          </ul>
+        </section>
+			</section>
+			
+			<section data-state="purple-slide">
+			  <section><h2><span class="lite">A11y</span> & D8</h2></section>
+			  <section>
+          <a href="https://www.drupal.org/about/features/accessibility" style="height:480px; overflow:hidden; display:block;"><img src="img/d8ax.png" style="width: 100%;max-width: none;max-height: none;margin: 0;" alt="Drupal 8 Accessibility eXperience"/></a>
+          <p><a href="https://www.drupal.org/about/features/accessibility">#D8AX - Drupal 8 Accessibility eXperience</a></p>
+			  </section>
+			  <section>
+          <h3>A11y in Drupal 8</h3>
+  			  <ul>
+  			    <li class="fragment"><a href="http://openconcept.ca/blog/mike/drupal-8%E2%80%99s-accessibility-advantage-wai-aria">WAI-ARIA</a>, <a href="http://openconcept.ca/blog/mike/drupal-8%E2%80%99s-accessibility-advantage-html5-improved-semantics">HTML5 & Improved Semantics</a></li>
+  			    <li class="fragment"><a href="http://openconcept.ca/blog/mike/drupal-8%E2%80%99s-accessibility-advantage-alt-tags-defaults">Content authoring</a> & <a href="http://openconcept.ca/blog/mike/drupal-8%E2%80%99s-accessibility-advantage-atag-compliance">ATAG Compliance</a></li>
+  			    <li class="fragment"><a href="https://www.drupal.org/node/1973218">Tab Control</li>
+  			    <li class="fragment"><a href="https://www.drupal.org/node/1973218">Aural Alerts</a></li>
+  			    <li class="fragment"><a href="https://www.drupal.org/project/devel_a11y">Devel Accessibility</a> module</li>
+			    </ul>
+			  </section>
+			  <section>
+          <a href="https://docs.google.com/presentation/d/19O3png9GsAam431zRd80EY3vDKMbXAnc4c0s2edpLa0/edit#slide=id.p6" style="height:480px; overflow:hidden; display:block;"><img src="img/gifford.png" style="width: 100%;max-width: none;max-height: none;margin: 0;" alt="How Drupal 8 Makes Your Website More Easily Accessible"/></a>
+          <p><a href="https://docs.google.com/presentation/d/19O3png9GsAam431zRd80EY3vDKMbXAnc4c0s2edpLa0/edit#slide=id.p6">How Drupal 8 Makes Your Website More Easily Accessible</a></p>
+			  </section>
+			</section>
+	<! Wasting Time --------------------------------------------------------------------------------->		
+			
+			<section data-background-image="https://66.media.tumblr.com/tumblr_lzd4aljdnq1r0gt0xo1_500.gif"></section>
+      <section data-state="black-slide" data-background-image="img/process.png" data-background-position="right">
+        <div style="background-color:rgba(0, 0, 0, 0.6); padding: .5em 1em;"><h2>We didn't want <u>technically accessible</u>, we wanted <u>beautifully accessible</u></h2></div>
+      </section>
+			
+<! How to identify a11y gaps ---------------------------------------------------------------------->		
+			<section data-state="pink-slide">
+			  <section><h2>How to identify a11y gaps</h2></section>
+			  <section><h3>Visual Testing</h3><ul>
+  			  <li>Plan heading structure early</li>
+  			  <li>Prioritize function over form</li>
+  			  <li>Allow indicators</li>
+			  </ul></section>
+			  <section><h3>Automated Functional testing</h3><ul>
+  			  <li><a href="http://wave.webaim.org/report#/http://events.drupal.org/dublin2016">WAVE toolbar by WebAIM</a></li>
+  			  <li><a href="https://tenon.io/index.php">Tenon.io</a></li>
+			  </ul></section>
+			  <section><h3>Manual Functional testing</h3><ul>
+  			  <li>VoiceOver for macOS/iOS</li>
+  			  <li>TalkBack for Android</li>
+  			  <li><a href="http://www.nvaccess.org/">NVDA</a> for Windows</li>
+  			  <li><a href="http://www.freedomscientific.com/Products/Blindness/JAWS">JAWS</a> for Windows</li>
+			  </ul></section>
+			  <section><h3>User Experience testing</h3><ul>
+  			  <li>Pairs of researchers meet with individual users</li>
+  			  <li>Examine behaviours & attitudes relevant to the workflow</li>
+			  </ul></section>
+			</section>
+			
+<! How to resolve a11y gaps ----------------------------------------------------------------------->
+			<section data-state="orange-slide">
+			  <section><h2>How to resolve a11y gaps</h2></section>
+			  
+			  <section><h3>Functional solutions</h3></section>
+			  <section>
+  			  <h4>Landmark Labels<br/>
+    			  <small><a href="https://github.com/emarchak/closing-the-gaps/commit/a7ce0ace5d36789c541f4cb396414f1b2b824f4d">Add descriptive aria labels to page landmarks.</a></small>
+  			  </h4>
+          <pre><code data-trim data-noescape>&lt;main role=&quot;main&quot; aria-label=&quot;{{ 'Content'|t }}&quot;&gt;</code></pre>
+			  </section>
+			  <section>
+  			  <h4>Pagination<br/>    			  
+    			  <small><a href="https://github.com/emarchak/closing-the-gaps/commit/a6f2ed3d1580de9a95cf5a8d844e3b67e1563ae6">Improve legibility of pager for screen readers.</a></small>
+  			  </h4>
+          <pre><code data-trim data-noescape>&lt;li class=&quot;pager__item pager__item--next&quot;&gt;
+  &lt;a class=&quot;button&quot; href=&quot;{{ items.next.href }}&quot; rel=&quot;next&quot;{{ items.next.attributes|without('href', 'title', 'rel') }}&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;{{ 'Next page'|t }}&lt;/span&gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;{{ items.next.text|default('Next &rsaquo;'|t) }}&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/li&gt;</code></pre></section>
+			  <section>
+  			  <h4>Form Errors<br/>		  
+    			  <small> Enable inline form errors, & <a href="https://github.com/emarchak/closing-the-gaps/commit/0cc1c6102675b0623612a3e8dc2439c0343eac4c">remove HTML5 required attribute.</a></small>
+  			  </h4>
+          <pre><code data-trim data-noescape>if (isset($variables['attributes']['required'])) {
+  unset($variables['attributes']['required']);
+}</code></pre></section>
+			  <section>
+  			  <h4>&lt;Picture&gt; element<br/>
+    			  <small><a href="https://github.com/emarchak/closing-the-gaps/commit/c515a3aa6e9b26e607d718d87dc11f95423a193a">Add Alternative text to picture elements.</a></small>
+          </h4>
+          <pre><code data-trim data-noescape>{% if img_element['#attributes'].url and alt %}
+  &lt;p class=&quot;visually-hidden&quot;&gt;{{ alt }}&lt;/p&gt;
+{% endif %}</code></pre></section>
+			  <section>
+  			  <h4>Skip to Main Content<br/>
+    			  <small><a href="https://github.com/emarchak/closing-the-gaps/commit/00517f0e2dce5400c7d588886e11dc17d2c0ea3c">Add js to help handle custom scrolling.</a></small>
+  			  </h4>
+          <pre><code data-trim data-noescape>$('html, body')
+.animate({scrollTop: targetPosition.top}, 600)
+.promise()
+.then(function () {
+  $target.focus();
+});</code></pre></section>
+			  <section>
+  			  <h4>Relate block titles & labels<br/>
+    			  <small><a href="https://github.com/emarchak/closing-the-gaps/commit/84d469397f8e3cc14baa038d9669f302ad947fd7">Use aria labelled by on blocks to help with association.</a></small>
+    			  </h4>
+        <pre><code data-trim data-noescape>&lt;a
+  id=&quot;{{ cta_id }}&quot;
+  class=&quot;btn btn-default&quot;
+  href=&quot;{{ content.field_call_to_action[0]['#url'] }}&quot;
+  aria-labelledby=&quot;{{ cta_id }} {{ heading_id }}&quot;&gt;</code></pre></section>
+        
+			  <section><h3>Experiential solutions</h3></section>
+			  <section><h4>Visual Design Best Practices</h4><ul>
+  			  <li>Check early, check often</li>
+  			  <li><a href="https://github.com/getflourish/Sketch-Color-Contrast-Analyser">Sketch Color Contrast Analyser</a></li>
+  			  <li><a href="http://webaim.org/blog/accessibility-for-designers/">WebAIM Accessibility Checklist</a></li>
+			  </ul></section>
+			  <section><h4>UX Testing Best Practices</h4><ul>
+  			  <li>Mixing remote and in-person testing</li>
+  			  <li>Bring-your-own-device</li>
+  			  <li>Emphasis on depth over breadth</li>
+			  </ul></section>
+			</section>
+		  <section data-background-image="https://31.media.tumblr.com/e5762a0c6ebc9cb7e1458cb34a3f6114/tumblr_inline_nlc6xf34Ar1qais6x.gif"></section>		
+<! Thank you -------------------------------------------------------------------------------------->        				    
+			<section>
+			  <section><h2>Further Resources</h2>
+			  <ul>
+  			  <li>Links contained in slide deck.</li>
+  			  <li><a href="https://events.drupal.org/dublin2016/sessions/future-directions-drupal-accessibility">Future directions Drupal for accessibility</a> 09/29/2016 - 10:45</li>
+  			  <li><a href="https://events.drupal.org/dublin2016/sessions/empathy-and-future-web-accessibility">Empathy and future web accessibility</a> 09/28/2016 - 12:00</li>
+			  </ul></section>
+        <section data-background-image="img/Feu_artwork_presentation1.jpg"></section>
+			</section>
+			
+      <section data-state="title-slide">
+        <h1>Thank you</h1>
+        <p><a href="http://twitter.com/emarchak">@emarchak</a> / <a href="http://twitter.com/myplanetHQ">@myplanetHQ</a></p>
+			</section>
+			
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
