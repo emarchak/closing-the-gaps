@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the closing_the_gaps theme.
+ */
+
+/**
+ * Include preprocess files
+ */
+foreach (glob(dirname(__FILE__) . "/preprocess/*.inc") as $filename) {
+  include_once $filename;
+}
+
+/**
+ * Implements HOOK_preprocess.
+ */
+function closing_the_gaps_preprocess() {
+  $inline_form_errors = \Drupal::service('module_handler')->moduleExists('inline_form_errors');
+  if (!$inline_form_errors) {
+    drupal_set_message(t('This theme requires the Inline Form Errors module.'), 'error');
+  }
+}

@@ -1,0 +1,7 @@
+name: Closing the Gaps
+type: theme
+description: Prioritizing accessibility in custom themes with Drupal 8
+package: Other
+core: 8.x
+base theme: stable
+
