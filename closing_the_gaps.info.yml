@@ -3,5 +3,8 @@ type: theme
 description: Prioritizing accessibility in custom themes with Drupal 8
 package: Other
 core: 8.x
+libraries:
+  - closing_the_gaps/base
+
 base theme: stable
 
